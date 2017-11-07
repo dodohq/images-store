@@ -20,3 +20,7 @@
 #  name = "github.com/x/y"
 #  version = "2.4.0"
 
+[metadata.heroku]
+  root-package = "github.com/dodohq/images-store"
+  go-version = "go1.9"
+  install = ["./..."]
