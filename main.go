@@ -77,6 +77,7 @@ func httpRespond(w http.ResponseWriter, r *http.Request) {
 		}
 		// Handle meta data of image
 		decoder := schema.NewDecoder()
+		decoder.IgnoreUnknownKeys(true)
 		var data reqBody
 		if err := decoder.Decode(&data, r.PostForm); err != nil {
 			http.Error(w, err.Error(), 500)
